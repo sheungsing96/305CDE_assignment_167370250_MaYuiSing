@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Register</title>
+  <link rel="stylesheet" href="css/s2.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+  <h1 class="register-title">Welcome</h1>
+  <form id="signup" class="register">
+    <div class="register-switch">
+      <input type="radio" name="gender" value="F" id="sex_f" class="register-switch-input" checked>
+      <label for="sex_f" class="register-switch-label">Female</label>
+      <input type="radio" name="gender" value="M" id="sex_m" class="register-switch-input">
+      <label for="sex_m" class="register-switch-label">Male</label>
+    </div>
+	<input id="username" type="username" class="register-input" placeholder="User name">
+    <input id="email" type="email" class="register-input" placeholder="Email address">
+    <input id="password" type="password" class="register-input" placeholder="Password">
+    <input id="submit" type="submit" value="Create Account" class="register-button">
+	<input id="cancel" type="submit" value="Cancel" class="register-button">
+  </form>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+	// Receive message from server
+	var socket = io();
+	
+	// Receive message when insert is successful
+    socket.on("insert_successful", function(data) {
+		alert("Welcome! You have Register successfully.");
+		window.location = "/signin.html";
+	});
+	
+	socket.on("user_exists", function(data) {
+		alert("This user account has already been registered. ");
+	});
+	
+	socket.on("name_exists", function(data) {
+		alert("This user name has already been used. ");
+	});
+	
+	socket.on("email_exists", function(data) {
+		alert("This email address has already been registered. ");
+	});
+	
+	$(function() {
+		$("#submit").click(function(e) {
+			var user = {};
+			user.gender = $("input[name='gender']:checked").val();
+			user.username = $("#username").val();
+			user.email = $("#email").val();
+			user.password = $("#password").val();
+			if (user.username == "" || user.email == "" || user.password == "") {
+				alert("You must enter all information. ");
+			} else {
+				$.ajax( {
+					url: "http://localhost:8000/signin.html",
+					type: "POST",
+					data: user
+				});
+			}
+			return false;
+		});
+	});
+</script>
+</html>

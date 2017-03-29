@@ -1,0 +1,520 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> 
+<![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> 
+<![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<title>305CDE</title>
+    <meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+	<!--Favicons-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+
+	<!--Main CSS-->
+	<link rel="stylesheet" href="css/t_s.css">
+    
+    <!--The CSS of Bootstrap and Custom-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ame.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/t_m.css">
+
+</head>
+<body>
+	
+	<div class="site-header">
+		<div class="main-navigation">
+			<div class="responsive_menu">
+				<ul>
+					<li><a class="show-1 templatemo_home" href="">Search Photo</a></li>
+					<li id="li1"><a class="show-3 templatemo_page3" href="">Favourite List</a></li>
+					<li><a class="show-4 templatemo_page4" href="">Location of VTC</a></li>
+					<li><a class="show-5 templatemo_page5" href="">Account</a></li>
+				</ul>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 responsive-menu">
+						<a href="#" class="menu-toggle-btn">
+				            <i class="fa fa-bars"></i>
+				        </a>
+					</div> <!--/.col-md-12-->
+					<div class="col-md-12 main_menu">
+						<ul>
+							<li><a class="show-1 templatemo_home" href="">Search Photo</a></li>
+							<li id="li2"><a class="show-3 templatemo_page3" href="">Favourite List</a></li>
+							<li><a class="show-4 templatemo_page4" href="">Location of VTC</a></li>
+							<li><a class="show-5 templatemo_page5" href="">Account</a></li>
+							
+						</ul>
+					</div> <!--/.col-md-12-->
+				</div> <!--/.row-->
+			</div> <!--/.container-->
+		</div> <!--/.main-navigation-->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<a href="" class="templatemo_logo">
+						<h1 id="heading">Hello!</h1>
+					</a> <!--/.logo-->
+				</div> <!--/.col-md-12-->
+			</div> <!--/.row-->
+		</div> <!--/.container-->
+	</div> <!--/.site-header-->
+	
+	<div id="menu-container">
+
+		<div class="content homepage" id="menu-1">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-md-offset-4" ng-app="">
+						<input class="icon-item2" id="key" type="text" size="40" placeholder="Type any things what you want. " ng-model="key">
+						<input class="icon-item2" type="button" value="Search" onclick='search()'>
+						<br></br>
+						<button class="icon-item2" size="5">You want to search: {{key}}</button>
+						<br></br>
+					</div>
+					<div class="col-md-2 col-sm-6 col-md-offset-1">
+						<div class="gallery-item">
+								<img id="image1" src="images/country/1.jpg" alt="image 1">
+								<div class="overlay">
+									<a id="a1" class="fa fa-expand" onclick="doConfirm('image1')">+</a>
+								</div>
+							<div class="content-gallery">
+								<h3 id="title1"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+					<div class="col-md-2 col-sm-6">
+						<div class="gallery-item">
+							<div class="image">
+								<div class="overlay">
+									<a id="a2" class="fa fa-expand" onclick="doConfirm('image2')">+</a>
+								</div>
+								<img id="image2" src="images/country/2.jpg" alt="image 2">
+							</div>
+							<div class="content-gallery">
+								<h3 id="title2"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+					<div class="col-md-2 col-sm-6">
+						<div class="gallery-item">
+							<div class="image">
+								<div class="overlay">
+									<a id="a3" class="fa fa-expand" onclick="doConfirm('image3')">+</a>
+								</div>
+								<img id="image3" src="images/country/3.jpg" alt="image 3">
+							</div>
+							<div class="content-gallery">
+								<h3 id="title3"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+					<div class="col-md-2 col-sm-6">
+						<div class="gallery-item">
+							<div class="image">
+								<div class="overlay">
+									<a id="a4" class="fa fa-expand" onclick="doConfirm('image4')">+</a>
+								</div>
+								<img id="image4" src="images/country/4.jpg" alt="image 4">
+							</div>
+							<div class="content-gallery">
+								<h3 id="title4"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+					<div class="col-md-2 col-sm-6">
+						<div class="gallery-item">
+							<div class="image">
+								<div class="overlay">
+									<a id="a5" class="fa fa-expand" onclick="doConfirm('image5')">+</a>
+								</div>
+								<img id="image5" src="images/country/5.jpg" alt="image 5">
+							</div>
+							<div class="content-gallery">
+								<h3 id="title5"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+					<div class="col-md-2 col-sm-6 col-md-offset-2">
+						<div class="gallery-item">
+							<div class="image">
+								<div class="overlay">
+									<a id="a6" class="fa fa-expand" onclick="doConfirm('image6')">+</a>
+								</div>
+								<img id="image6" src="images/country/6.jpg" alt="image 6">
+							</div>
+							<div class="content-gallery">
+								<h3 id="title6"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+					<div class="col-md-2 col-sm-6">
+						<div class="gallery-item">
+							<div class="image">
+								<div class="overlay">
+									<a id="a7" class="fa fa-expand" onclick="doConfirm('image7')">+</a>
+								</div>
+								<img id="image7" src="images/country/7.jpg" alt="image 7">
+							</div>
+							<div class="content-gallery">
+								<h3 id="title7"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+					<div class="col-md-2 col-sm-6">
+						<div class="gallery-item">
+							<div class="image">
+								<div class="overlay">
+									<a id="a8" class="fa fa-expand" onclick="doConfirm('image8')">+</a>
+								</div>
+								<img id="image8" src="images/country/8.jpg" alt="image 8">
+							</div>
+							<div class="content-gallery">
+								<h3 id="title8"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+					<div class="col-md-2 col-sm-6">
+						<div class="gallery-item">
+							<div class="image">
+								<div class="overlay">
+									<a id="a9" class="fa fa-expand" onclick="doConfirm('image9')">+</a>
+								</div>
+								<img id="image9" src="images/country/9.jpg" alt="image 9">
+							</div>
+							<div class="content-gallery">
+								<h3 id="title9"></h3>
+							</div>
+						</div> <!--/.country-item-->
+					</div> <!--/.col-md-2-->
+				</div> <!--/.row-->
+			</div> <!--/.slide-item-->
+		</div> <!--/.homepage-->
+
+
+		<div class="content services" id="menu-3">
+			<div class="container">
+				<div class="row">
+               		<d1v class"d1" id="fav_list"></div>
+                
+                
+                
+					<div class="col-md-9 col-sm-10">
+						<div class="inner-content">
+							<div class="toggle-content" id="tab1">
+								<h2 class="page-title">Vision</h2>
+								<p>To be the leading provider of vocational and professional education and training in the region.</p>
+							</div> <!--/.toggle-content-->
+                            
+                            
+                            
+							<div class="toggle-content" id="tab2">
+								<h2 class="page-title">Mission</h2>
+								<ul>
+                                <li>To provide a valued choice to school leavers and working adults to acquire values, knowledge and skills for lifelong learning and enhanced employability.</li>
+								<li>To provide valued supports to industries for their manpower development.</li>
+                            	</ul>
+							</div> <!--/.toggle-content-->
+                            
+                            
+                            
+							<div class="toggle-content" id="tab3">
+								<h2 class="page-title">Opportunities • Action • Success</h2>
+								<p>Established in 1982, the Vocational Training Council (VTC) is the largest vocational and professional education and training provider in Hong Kong. VTC provides valuable credentials for some 250 000 students each year through a full range of pre-employment and in-service programmes with internationally recognised qualifications.</p>
+
+								<p>VTC draws strength from the number of Member Institutions, breadth of programmes and variety of accredited qualifications to provide a new world of OPPORTUNITIES to learners of all ages and abilities. Championing a teaching and learning approach that is practical, hands-on and outcome-based, our ultimate aim does not only centre on the acquisition of knowledge and skills, but equally on ACTION itself.</p>
+
+								<p>Our "think and do" approach cultivates the passions for learning while imparting the necessary skills and know-how for SUCCESS.
+</p>
+							</div> <!--/.toggle-content-->
+                            
+                            
+                            
+						</div> <!--/.inner-content-->
+					</div> <!--/.col-md-9-->
+                    
+                    
+                    
+					<div class="col-md-3 col-sm-2">
+						<div id="icons">
+							<ul class="tabs">
+								<li>
+									<a href="#tab1" class="icon-item">
+										<i class="fa fa-cogs"></i>
+										<span>Vision</span>
+									</a> <!--/.icon-item-->
+                                    
+                                    
+                                    
+								</li>
+								<li>
+									<a href="#tab2" class="icon-item">
+										<i class="fa fa-leaf"></i>
+										<span>Mission</span>
+									</a> <!--/.icon-item-->
+                                    
+                                    
+                                    
+								</li>
+								<li>
+									<a href="#tab3" class="icon-item">
+										<i class="fa fa-users"></i>
+										<span>Opportunities • Action • Success</span>
+									</a> <!--/.icon-item-->
+                                    
+                                    
+                                    
+								</li>
+							</ul>
+						</div> <!--/.icons-->
+                        
+                        
+                        
+					<!--</div>--> <!--/.col-md-3-->
+                    
+                    
+                    
+				</div> <!-- /.row -->
+			</div> <!-- /.container -->
+		</div> <!-- /.services -->
+		
+		<div class="content about" id="menu-4">
+			<div class="container">
+				<div class="row">
+					<div class="center" style="width: 80%; margin: 0px auto;">
+						<div class="widget-content">
+							<div class="page-title">Location of VTC</div>
+							<br>
+							<div id="map"></div>
+							<style>
+							#map {
+								width: 100%;
+								height: 400px;
+								background-color: white;
+							}
+							</style>
+                            <div class="contact-information">
+                            	<div class="row">
+                            		<div class="col-md-6 col-sm-6">
+                                
+                            			<p>Address: 9/F, VTC Tower 27 Wood Road Wan Chai</p>
+                            		</div> <!-- /.col-md-6 -->
+                            		<div class="col-md-6 col-sm-6 text-right">
+                            			<ul>
+                            				<div>Tel: (852)39743664</div>
+                            				<div>Email: open@vtc.edu.hk</div>
+                            			</ul>
+                            		</div> <!-- /.col-md-6 -->
+                            	</div> <!-- /.row -->
+                            </div> <!-- /.contact-information -->
+						</div> <!-- /.inner-content -->
+					</div> <!-- /.col-md-6 -->
+				</div> <!-- /.row -->
+			</div> <!-- /.container -->
+		</div> <!-- /.services -->
+		
+		<div class="content contact" id="menu-5">
+			<div class="container">
+				<section id="content">
+					<br></br>
+					<br></br>
+					<div class="center" style="width: 18%; margin: 0px auto;">
+						<form id="form1">
+							<input id="btnSignIn" type="button" class="icon-item2" style="height:50px;width:200px" value="Sign in">
+						</form>
+					</div>
+					
+				</section><!-- content -->
+			</div><!-- container -->
+		</div> <!-- /.contact -->
+
+	</div> <!-- /#menu-container -->
+
+	<div id="templatemo_footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p style='color:white'>305CDE Assignment</p>
+				</div> <!-- /.col-md-12 -->
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+	</div> <!-- /.templatemo_footer -->
+
+	<!-- Scripts -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/m.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/ts.js"></script>
+	<script src="js/jquery.lightbox.js"></script>
+	<script src="js/t_c.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnXHokpOy_wqm5vbFNfDbEdkuTbIi1hJk&callback=initMap">
+    </script>
+	<script src="/socket.io/socket.io.js"></script>
+    
+
+	<script>
+		window.onload = function() {
+			$("#li1").hide();
+			$("#li2").hide();
+		}
+	
+		// Receive message from server
+		var socket = io();
+		
+		// Receive message when signin is successful
+		socket.on("login_successful", function(data) {
+			$("#li1").show();
+			$("#li2").show();
+			document.getElementById("heading").innerHTML = "Hello!, " + data.username + "!";
+			document.getElementById("form1").innerHTML =
+				"<input id='btnResetPW' type='button'  style='height:50px;width:200px;background-color:white' value='Reset password' onclick='resetPassword()'>" +
+				"<br></br>" +
+				"<input id='btnSignOut' type='button'  style='height:50px;width:200px;background-color:white' value='Sign out' onclick='signOut()'>";
+				updateFavouriteList(data.favouriteList);
+		});
+		
+		socket.on("must_login", function(data) {
+			alert("This function only can use under you have already login. ");
+		});
+		
+		socket.on("list_updated", function(data) {
+			alert("The photo is added into your favourite list. ");
+			updateFavouriteList(data.favouriteList);
+		});
+		
+		socket.on("item_removed", function(data) {
+			alert("The photo is removed from your favourite list. ");
+			updateFavouriteList(data.favouriteList);
+		});
+		
+		socket.on("fav_exist", function(data) {
+			alert("The photo already existed in your favourite list. ");
+		});
+		
+		var rulList;
+		
+		function updateFavouriteList(list) {
+			urlList = list;
+			document.getElementById("fav_list").innerHTML = "";
+			for (var i=0; i<list.length; i++) {
+				document.getElementById("fav_list").innerHTML +=
+				"<div class='col-md-2 col-sm-6 col-md-offset-0'>" +
+					"<div class='gallery-item'>" +
+						"<img id='image' src="+list[i]+" alt='image'>" +
+							"<div style ='text-align: center;'>" +
+								"<input type'button' value='Drop' style='height:35px;width:100px' onclick='remove("+i+")'>" +
+							"</div>" +
+					"</div>" +
+				"</div>";
+			}
+		}
+		
+		function remove(num) {
+			var user= {};
+			user.action = "remove_favourite";
+			user.url = urlList[num];
+			$.ajax( {
+				url: "http://localhost:8000/index.html",
+				type: "POST",
+				data: user
+			});
+			return false;
+		}
+	
+		
+		function initMap() {
+			var mapOptions = {
+			  	zoom: 18,
+			  	center: {lat: 22.2774528, lng: 114.1753353}
+			}
+			var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+			var marker = new google.maps.Marker({
+			  	position: {lat: 22.2765435, lng: 114.1775005},
+			  	map: map
+			});
+		}
+
+		function search() {
+			var searchKey = $("#key").val();
+
+			var searchResult = $.getJSON( "https://api.cognitive.microsoft.com/bing/v5.0/images/search?width=650&height=435&subscription-key=cebbe5720816444fb7d3953a68927840&q=" + searchKey, function() {
+				console.log( "success" );
+			})
+			.done(function() {
+				console.log( "second success" );
+			})
+			.fail(function() {
+				console.log( "error" );
+			})
+			.always(function() {
+				console.log( "complete" );
+			});
+			searchResult.complete(function() {
+				$("#image1").attr("src", JSON.parse(searchResult.responseText).value[0].thumbnailUrl);
+				$("#image2").attr("src", JSON.parse(searchResult.responseText).value[1].thumbnailUrl);
+				$("#image3").attr("src", JSON.parse(searchResult.responseText).value[2].thumbnailUrl);
+				$("#image4").attr("src", JSON.parse(searchResult.responseText).value[3].thumbnailUrl);
+				$("#image5").attr("src", JSON.parse(searchResult.responseText).value[4].thumbnailUrl);
+				$("#image6").attr("src", JSON.parse(searchResult.responseText).value[5].thumbnailUrl);
+				$("#image7").attr("src", JSON.parse(searchResult.responseText).value[6].thumbnailUrl);
+				$("#image8").attr("src", JSON.parse(searchResult.responseText).value[7].thumbnailUrl);
+				$("#image9").attr("src", JSON.parse(searchResult.responseText).value[8].thumbnailUrl);
+			});
+			
+			
+		}
+		
+		$(function() {
+			$("#btnSignIn").click(function(e) {
+				window.location = "/signin.html";
+			});
+		});
+		
+		function doConfirm(img) {
+			if (confirm("Do you want to add this photo in your favourite list?")) {
+				var user = {};
+				user.action = "add_favourite";
+				user.url = $("#"+img).attr("src");
+				$.ajax( {
+					url: "http://localhost:8000/index.html",
+					type: "POST",
+					data:user
+				});
+				return false;
+			}
+		}
+				
+		function resetPassword() {
+			window.location = "/rsp.html";
+		}
+		
+		function signOut() {
+			var user = {};
+			user.action = "sign_out";
+			$.ajax( {
+				url: "http://localhost:8000/index.html",
+				type: "POST",
+				data: user
+			});
+			document.getElementById("form1").innerHTML = 
+				"<input id='btnSignIn' type='button' style='height:50px;width:200px' value='Sign in'>";
+			window.location = "/index.html";
+			return false;
+		}
+	</script>
+
+</body>
+</html>

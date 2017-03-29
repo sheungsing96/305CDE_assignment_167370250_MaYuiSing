@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Lost your password</title>
+<link href="css/s3.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="keywords" content="Forgot Password Form Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<!--google fonts-->
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<!--element start here-->
+<div class="elelment">
+	<h2>Lost your password</h2>
+	<div class="element-main">
+		<h1>Don't worry!</h1>
+		<p>Please enter your register email address to reset your password. </p>
+		<form name="form">
+			<input id="email" type="text" value="Your e-mail address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your e-mail address';}">
+			<input id="submit" type="submit" value="Reset my Password">
+			<input id="cancel" type="submit" value="Cancel">
+		</form>
+	</div>
+</div>
+<div class="copy-right">
+<p>© 2016 305CDE. All rights reserved</a></p>
+</div>
+
+<!--element end here-->
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+	// Receive message from server
+	var socket = io();
+	
+	// Receive message when reset password is successful
+	socket.on("reset_successful", function(data) {
+		alert(data.username + ", this is your new password: " + data.password + ". ");
+		window.location = "/signin.html";
+	});
+	
+	socket.on("reset_failed", function(data) {
+		alert("This email address is not valid. ");
+	});
+	
+	$(function() {
+		$("#submit").click(function(e) {
+			if (!($("#email").val().search("@") > 0)) {
+				alert("This email address does not in the right format. ");
+			} else {
+				var user = {}, password = Math.random().toString(36).slice(-9);
+				user.email = $("#email").val();
+				user.password = password;
+				$.ajax( {
+					url: "http://localhost:8000/lost_pw.html",
+					type: "POST",
+					data: user
+				});
+				return false;
+			}
+		});
+		$("#cancel").click(function(e) {
+			document.form.action = "/signin.html";
+		});
+	});
+</script>
+</html>

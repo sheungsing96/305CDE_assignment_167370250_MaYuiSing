@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Sign In</title>
+		<link rel="stylesheet" href="css/s.css" type="text/css" media="all" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	</head>
+<body>
+	<div class="container">
+		<section id="content">
+			<form name="form">
+				<h1>Sign In</h1>
+				<div>
+					<input type="text" placeholder="Username" required="" id="username" />
+				</div>
+				<div>
+					<input type="password" placeholder="Password" required="" id="password" />
+				</div>
+				<div>
+					<input id="submit" type="submit" value="Sign in" />
+					<a href="lost_pw.html">Lost your password?</a>
+					<a href="rgt.html">Sign Up</a>
+				</div>
+			</form><!-- form -->
+			<div class="button">
+				<a href="/index.html">Go to index</a>
+			</div><!-- button -->
+		</section><!-- content -->
+	</div><!-- container -->
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+	// Receive message from server
+	var socket = io();
+	
+	// Receive message when sign in is successful
+    socket.on("login_successful", function(data) {
+		window.location = "/index.html";
+	});
+	
+	// Receive message when sign in is failed
+	socket.on("login_failed", function(data) {
+		alert("Login failed.\nUser name or password is incorrect. ");
+	});
+	
+	$(function() {
+		$("#submit").click(function(e) {
+			$(function() {
+				var user = {};
+				user.username = $("#username").val();
+				user.password = $("#password").val();
+				$.ajax( {
+					url: "http://localhost:8000/signin.html",
+					type: "POST",
+					data: user
+				});
+				return false;
+			});
+		});
+	});
+</script>
+</html>
